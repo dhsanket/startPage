@@ -1,41 +1,50 @@
 <html>
 <head>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 
 </head>
 
 <body>
 <ul class="startpage-list">
-    <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo-->
-    <!--https://www.w3schools.com/howto/howto_js_todolist.asp-->
+    <li> <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo-->
+        <!--https://www.w3schools.com/howto/howto_js_todolist.asp-->
         <div id="myDIV" class="header">
-          <h2 style="margin:5px">My To Do List</h2>
-          <input type="text" id="myInput" placeholder="Title...">
-          <span onclick="newElement()" class="addBtn">Add</span>
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
         </div>
 
         <ul id="myUL">
-          <li class="checked">This List Should DIE on Browser shutdown, Force you to FINISH This LIST ASAP </li>
-          <li> 20 mins sweat down </li>
+            <li class="checked">This List Should DIE on Browser shutdown, Force you to FINISH This LIST ASAP </li>
+            <li> 20 mins sweat down </li>
             <li> make money on www </li>
             <li> <a target="_blank" href="https://www.thesitewizard.com/revenue/index.shtml"> webmaster tutorial </a></li>
         </ul>
-</ul>
-<ul class="startpage-list" id="header-row">
-    <li>
-        <p id="today"></p>    </li>
-    <li id="weather">
-<a href="https://www.accuweather.com/en/in/gulmarg/359277/weather-forecast/359277" class="aw-widget-legal">
-<!--
-By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
--->
-</a><div id="awcc1513273266860" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1513273266860"></div><script type="text/javascript" src="weather-launch.js"></script>
     </li>
+
+    <li id="weather" >
+        <a href="https://www.accuweather.com/en/in/gulmarg/359277/weather-forecast/359277" class="aw-widget-legal">
+            <!--
+            By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+            -->
+        </a><div id="awcc1513273266860" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1513273266860"></div><script type="text/javascript" src="weather-launch.js"></script>
+    </li>
+
+
+    <li>
+        <p id="today" style="font-size:4.3em"></p>    </li>
+
+
+
+</ul>
+
+
+<ul class="startpage-list" id="header-row" style="height:3em">
     <li>
         <a target="_blank" href="https://twitter.com/alys_key"> retailNEws </a>
     </li>
     <li>
-                <a target="_blank" href="https://twitter.com/UnregulatedPod"> Cityam </a>
+        <a target="_blank" href="https://twitter.com/UnregulatedPod"> Cityam </a>
 
     </li>
     <li>
@@ -99,11 +108,11 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
 
 
 <ul class="startpage-list">
-<li>
+    <li>
 
 
 
-</li>
+    </li>
     <li>
         <div class="btcwdgt-news" bw-cur="gbp" bw-theme="light"></div>
     </li>
@@ -124,17 +133,17 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
 
 
 <ul class="startpage-list">
-<li>
-bbbbbbbbbbbb
-</li>
+    <li>
+        bbbbbbbbbbbb
+    </li>
     <li>
 
-bbbbbbbbbbbb
+        bbbbbbbbbbbb
     </li>
 
-<li>
-    bbbbbbbbbbbb
-</li>
+    <li>
+        bbbbbbbbbbbb
+    </li>
 
 
     <li>
@@ -144,16 +153,16 @@ bbbbbbbbbbbb
 
 
 <ul class="startpage-list">
-<li>
-
-</li>
     <li>
-       <!-- <a href="https://cex.io"><img src="https://cex.io/widget/light/300/btc-eur" width="300" height="250"/></a>-->
+
     </li>
-<li>
-    <iframe src="https://www.xe.com/pca/input.php?Amount=1&FromSelect=EUR&ToSelect=GBP&Amount=50.00" width="600"
-            height="200" name="Currency" frameborder="0" scrolling="no"></iframe>
-</li>
+    <li>
+        <!-- <a href="https://cex.io"><img src="https://cex.io/widget/light/300/btc-eur" width="300" height="250"/></a>-->
+    </li>
+    <li>
+        <iframe src="https://www.xe.com/pca/input.php?Amount=1&FromSelect=EUR&ToSelect=GBP&Amount=50.00" width="600"
+                height="200" name="Currency" frameborder="0" scrolling="no"></iframe>
+    </li>
 </ul>
 
 
@@ -189,6 +198,7 @@ bbbbbbbbbbbb
 
 ul.startpage-list {
 display: inline-flex;
+width: 100%;
 }
 
 
@@ -346,8 +356,13 @@ input {
 
 <script>
 var today = new Date();
-document.getElementById("today").innerHTML = today.toDateString();
-
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var months = ["January","February","March","April","May","June","July" ,"August" ,"September" ,"October" ,"November" ,"December"];
+document.getElementById("today").append(days[today.getDay()]+" ");
+// document.getElementById("today").innerHTML = today.toDateString();
+document.getElementById("today").insertAdjacentHTML('beforeend', " </br> " + today.getDate()+" ");
+document.getElementById("today").append(months[today.getMonth()]+" " );
+document.getElementById("today").append(today.getFullYear());
 
 
 $( document ).ready(function() {
