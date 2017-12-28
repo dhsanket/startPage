@@ -6,7 +6,7 @@
 
 <body>
 <ul class="row1 startpage-list" style="height:25em;">
-    <li style="width:30em; font-size:1em;">
+    <li style="overflow-y:scroll; width:30em; font-size:1em;">
         <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo-->
         <!--https://www.w3schools.com/howto/howto_js_todolist.asp-->
         <div id="myDIV" class="header">
@@ -15,10 +15,12 @@
             <span onclick="newElement()" class="addBtn">Add</span>
         </div>
 
-        <ul id="myUL">
+        <ul id="tasklist">
             <li class="checked">This List Should DIE on Browser shutdown, Force you to FINISH This LIST ASAP </li>
-            <li> 20 mins sweat down </li>
-            <li> make money on www </li>
+            <li> make money on www, Android, instagram, facebook, </li>
+            <li> 20 mins sweat down, <a target="_blank" href="https://www.instagram.com/p/BdNoaleDAGn/"> @evolve.nation </a> </li>
+            <li> Move Items to Luton - Sofa, plants, </li>
+            <li> setup Monthly Installments into Savings Account for - mom&dadDeposit, RahulDeposit, </li>
             <li> <a target="_blank" href="https://www.thesitewizard.com/revenue/index.shtml"> webmaster tutorial </a></li>
         </ul>
     </li>
@@ -50,7 +52,7 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
 
 
     <li>
-        <p id="today" style="font-size:4em"></p>    </li>
+        <p id="today"></p>    </li>
 
 
 
@@ -251,10 +253,15 @@ By accessing and/or using this code snippet, you agree to AccuWeather’s terms 
 
 <style type="text/css">
 #today {
-    font-size: 2em;
+    font-size: 4em;
     font-style: italic;
     font-variant: petite-caps;
 }
+
+#tasklist > li {
+    font-size: 2em;
+}
+
 
 #weather {
   margin: 3px;
@@ -502,7 +509,7 @@ function newElement() {
   if (inputValue === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("myUL").appendChild(li);
+    document.getElementById("tasklist").appendChild(li);
   }
   document.getElementById("myInput").value = "";
 
